@@ -1,0 +1,14 @@
+<div class="row clearfix">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_tag pages_weather_path, method: :post, id: "weather_form", remote: true do %>
+      <%= select_tag :city_id, options_from_collection_for_select(City.all, :id, :city_name), 
+          prompt: 'Choose City', class: "form-control", 
+          onchange: "$('#weather_form').submit();" %>
+    <% end %>
+    <br>
+    <div id="weather_info">
+      <div id="info"></div>
+      <img src="<%= asset_path 'loading.gif' %>" id="loading-indicator" style="display:none" />
+    </div>
+  </div>
+</div>

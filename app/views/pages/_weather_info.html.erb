@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">Location:</h2>
+  </div>
+  <div class="panel-body"><%= @location %></div>
+  <div class="panel-heading">
+    <h2 class="panel-title">Date:</h2>
+  </div>
+  <div class="panel-body"><%= @time %></div>
+  <div class="panel-heading">
+    <h2 class="panel-title">Temperature:</h2>
+  </div>
+  <div class="panel-body"><%= @temperature %></div>
+  <div class="panel-heading">
+    <h2 class="panel-title">Sky Conditions:</h2>
+  </div>
+  <div class="panel-body"><%= @sky_condition %></div>
+  <div class="panel-heading">
+    <h2 class="panel-title">Humidity:</h2>
+  </div>
+  <div class="panel-body"><%= @humidity %></div>
+  <div class="panel-heading">
+    <h2 class="panel-title">Pressure:</h2>
+  </div>
+  <div class="panel-body"><%= @pressure %></div>
+  <input type="submit" class="btn btn-primary btn-lg" value="Refresh" onclick="$('#weather_form').submit();" >
+</div>
