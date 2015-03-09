@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def weather
 
-    client = Savon.client(wsdl: @provider.url, convert_request_keys_to: :camelcase, read_timeout: 5)
+    client = Savon.client(wsdl: @provider.url, convert_request_keys_to: :camelcase, read_timeout: @provider.timeout)
 
     if params[:city_id].present?
       city = City.find(params[:city_id])
