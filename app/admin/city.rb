@@ -1,5 +1,5 @@
 ActiveAdmin.register City do
 
-  permit_params :city, :country
+  permit_params :city_name, :country
 
 end
